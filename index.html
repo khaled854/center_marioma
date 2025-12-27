@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>سنتر مريومه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛍️ سنتر مريومه</h1>
+        <p>كل اللي بيتك محتاجه في مكان واحد</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('home')">الرئيسية</button>
+        <button onclick="showSection('women')">حريمي</button>
+        <button onclick="showSection('men')">رجالي</button>
+        <button onclick="showSection('kids')">أطفالي</button>
+        <button onclick="showSection('homeStuff')">مفروشات</button>
+    </nav>
+
+    <!-- الأقسام -->
+    <section id="home" class="section active">
+        <h2 class="center">أهلاً بيك في سنتر مريومه ❤️</h2>
+    </section>
+
+    <section id="women" class="section">
+        <h2>👗 حريمي</h2>
+        <div class="products">
+            <div class="product-card">
+                <h3 class="product-title">سويتشيرت حريمي</h3>
+                <img src="https://i.postimg.cc/vZhhYLJ9/Screenshot-2025-12-27-145745.png" alt="سويتشيرت حريمي"
+                    class="product-img">
+                <p class="product-desc">سويتشيرت أزرق أنيق، ناعم ومريح في اللبس اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 300 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'سويتشيرت حريمي',300)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">فستان حريمي</h3>
+                <img src="https://i.postimg.cc/3x3QzSGq/dress.jpg" alt="فستان حريمي" class="product-img">
+                <p class="product-desc">فستان أنيق مناسب لكل المناسبات، خامة مريحة وناعمة.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 350 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'فستان حريمي',350)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">بلوزة حريمي</h3>
+                <img src="https://i.postimg.cc/9FqvXjQF/blouse.jpg" alt="بلوزة حريمي" class="product-img">
+                <p class="product-desc">بلوزة أنيقة تناسب الخروج والعمل اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 250 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'بلوزة حريمي',250)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">تنورة حريمي</h3>
+                <img src="https://i.postimg.cc/3Jz3qL3p/skirt.jpg" alt="تنورة حريمي" class="product-img">
+                <p class="product-desc">تنورة مريحة وعصرية للبس اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 200 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'تنورة حريمي',200)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">جاكيت حريمي</h3>
+                <img src="https://i.postimg.cc/BnT3k8h0/jacket.jpg" alt="جاكيت حريمي" class="product-img">
+                <p class="product-desc">جاكيت أنيق للشتاء، دافئ ومريح.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 400 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'جاكيت حريمي',400)">🛒 اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="men" class="section">
+        <h2>👔 رجالي</h2>
+        <div class="products">
+            <div class="product-card">
+                <h3 class="product-title">سويتشيرت رجالي أزرق</h3>
+                <img src="https://i.postimg.cc/vZhhYLJ9/Screenshot-2025-12-27-145745.png" alt="سويتشيرت رجالي أزرق"
+                    class="product-img">
+                <p class="product-desc">سويتشيرت أزرق مريح للبس اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 300 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'سويتشيرت رجالي أزرق',300)">🛒 اطلب الآن</button>
+            </div>
+            <div class="product-card">
+                <h3 class="product-title">قميص رجالي أبيض</h3>
+                <img src="https://i.postimg.cc/Dzv8c0P1/shirt.jpg" alt="قميص رجالي أبيض" class="product-img">
+                <p class="product-desc">قميص أبيض كلاسيكي للدوام والمناسبات.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 350 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'قميص رجالي أبيض',350)">🛒 اطلب الآن</button>
+            </div>
+            <div class="product-card">
+                <h3 class="product-title">جاكيت رجالي</h3>
+                <img src="https://i.postimg.cc/BnT3k8h0/jacket.jpg" alt="جاكيت رجالي" class="product-img">
+                <p class="product-desc">جاكيت أنيق للشتاء، دافئ ومريح.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 400 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'جاكيت رجالي',400)">🛒 اطلب الآن</button>
+            </div>
+            <div class="product-card">
+                <h3 class="product-title">بنطال رجالي كاجوال</h3>
+                <img src="https://i.postimg.cc/7ZkpPKXp/pants.jpg" alt="بنطال رجالي" class="product-img">
+                <p class="product-desc">بنطال كاجوال مريح للدوام والخروج.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 250 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'بنطال رجالي كاجوال',250)">🛒 اطلب الآن</button>
+            </div>
+            <div class="product-card">
+                <h3 class="product-title">تيشيرت رجالي</h3>
+                <img src="https://i.postimg.cc/pTjQqY7n/tshirt.jpg" alt="تيشيرت رجالي" class="product-img">
+                <p class="product-desc">تيشيرت بسيط ومريح للبس اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 150 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'تيشيرت رجالي',150)">🛒 اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="kids" class="section">
+        <h2>🧸 أطفالي</h2>
+        <div class="products">
+            <div class="product-card">
+                <h3 class="product-title">طقم أطفال</h3>
+                <img src="https://i.postimg.cc/vZhhYLJ9/Screenshot-2025-12-27-145745.png" alt="طقم أطفال"
+                    class="product-img">
+                <p class="product-desc">طقم أطفال مريح وعملي للعب اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 200 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'طقم أطفال',200)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">فستان أطفال</h3>
+                <img src="https://i.postimg.cc/7L4kXhPS/kids-dress.jpg" alt="فستان أطفال" class="product-img">
+                <p class="product-desc">فستان جميل وعملي للأطفال.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 180 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'فستان أطفال',180)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">تيشيرت أطفال</h3>
+                <img src="https://i.postimg.cc/pTjQqY7n/tshirt.jpg" alt="تيشيرت أطفال" class="product-img">
+                <p class="product-desc">تيشيرت مريح وخفيف للعب اليومي.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 120 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'تيشيرت أطفال',120)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">سروال أطفال</h3>
+                <img src="https://i.postimg.cc/7ZkpPKXp/pants.jpg" alt="سروال أطفال" class="product-img">
+                <p class="product-desc">سروال عملي ومريح للأطفال.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 100 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'سروال أطفال',100)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">جاكيت أطفال</h3>
+                <img src="https://i.postimg.cc/BnT3k8h0/jacket.jpg" alt="جاكيت أطفال" class="product-img">
+                <p class="product-desc">جاكيت دافئ ومريح للشتاء.</p>
+                <label>المقاس:
+                    <select class="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                </label>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 220 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'جاكيت أطفال',220)">🛒 اطلب الآن</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="homeStuff" class="section">
+        <h2>🛏️ مفروشات</h2>
+        <div class="products">
+            <div class="product-card">
+                <h3 class="product-title">ملاية سرير</h3>
+                <img src="https://i.postimg.cc/vZhhYLJ9/Screenshot-2025-12-27-145745.png" alt="ملاية سرير"
+                    class="product-img">
+                <p class="product-desc">ملاية سرير مريحة وعالية الجودة.</p>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 400 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'ملاية سرير',400)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">بطانية شتوية</h3>
+                <img src="https://i.postimg.cc/7b0GmHcX/blanket.jpg" alt="بطانية شتوية" class="product-img">
+                <p class="product-desc">بطانية دافئة وعالية الجودة للشتاء.</p>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 500 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'بطانية شتوية',500)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">مخدة نوم</h3>
+                <img src="https://i.postimg.cc/YCVY6hvC/pillow.jpg" alt="مخدة نوم" class="product-img">
+                <p class="product-desc">مخدة مريحة للنوم الصحي.</p>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 250 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'مخدة نوم',250)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">بطانية أطفال</h3>
+                <img src="https://i.postimg.cc/XN5h7X4G/kids-blanket.jpg" alt="بطانية أطفال" class="product-img">
+                <p class="product-desc">بطانية ناعمة ومريحة للأطفال.</p>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 300 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'بطانية أطفال',300)">🛒 اطلب الآن</button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">مفرش طاولة</h3>
+                <img src="https://i.postimg.cc/4yYk4dVQ/table-cloth.jpg" alt="مفرش طاولة" class="product-img">
+                <p class="product-desc">مفرش أنيق للطاولة بمقاس كبير.</p>
+                <label>الكمية: <input type="number" class="quantity-input" value="1" min="1"></label>
+                <p class="product-price">💰 السعر: 180 جنيه</p>
+                <button class="order-btn" onclick="addToCart(this,'مفرش طاولة',180)">🛒 اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- السلة -->
+    <section class="cart">
+        <h2>🛒 سلة الشراء</h2>
+        <ul id="cartItems"></ul>
+        <p>الإجمالي: <span id="total">0</span> جنيه</p>
+    </section>
+
+    <!-- الطلب -->
+    <section class="order">
+        <h2>📋 بيانات العميل</h2>
+
+        <input id="name" placeholder="الاسم">
+        <input id="address" placeholder="العنوان">
+        <input id="city" placeholder="المحافظة">
+        <input id="phone1" placeholder="رقم تليفون 1">
+        <input id="phone2" placeholder="رقم تليفون 2">
+
+        <button onclick="sendWhatsApp()">تأكيد وإرسال الطلب</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3>🛍️ سنتر مريومه</h3>
+        <p>كل اللي بيتك محتاجه في مكان واحد</p>
+
+        <div class="footer-sections">
+            <div>
+                <h4>الأقسام</h4>
+                <ul>
+                    <li>حريمي</li>
+                    <li>رجالي</li>
+                    <li>أطفالي</li>
+                    <li>مفروشات</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>تواصل معنا</h4>
+                <p>📞 01116368325</p>
+                <p>📍 مصر</p>
+            </div>
+
+            <div>
+                <h4>مشاريعي</h4>
+                <ul>
+                    <li><a href="https://khaled854.github.io/profile/" target="_blank">
+                            اضغط علي الكلام عشان تشوف مشاريعي========> مشاريعي خش بص بصه
+                        </a></li>
+                    <li><a href="https://www.linkedin.com/in/khaled-taha-0a2a41389" target="_blank">
+                            ضغط علي الكلام عشان نطلب موقعك========> تابع معايا لطلب موقعك الخاص
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="copyright">
+            © 2025 جميع الحقوق محفوظة | سنتر مريومه
+        </p>
+    </div>
+</footer>
+
+</html>
